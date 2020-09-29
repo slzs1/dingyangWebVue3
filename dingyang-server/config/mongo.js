@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const url = 'mongodb://root:root@39.105.94.140:27017/dingyang'
+const url = 'mongodb://root:root@47.97.204.235:27017/dingyang'
 module.exports = {
     connect: ()=>{
         mongoose.connect(url)
