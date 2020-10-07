@@ -1,5 +1,5 @@
-let host = 'http://localhost:3004';
-  
+// let host = 'http://localhost:3004';
+let host = 'http://47.94.168.183:3004';
 import Vue from 'vue' // vue 文件引入 - 方便在vue方法内容直接 this 调取
   
 let config = {

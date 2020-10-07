@@ -3,7 +3,7 @@ jQuery(document).ready(function(){
     function getDataList(){
         $.ajax({
             type: 'get',
-            url: '/api/huayin/article?count=16',
+            url: 'http://47.94.168.183:3004/api/huayin/article?count=16',
             dataType: 'json',
             success:function(json){
                 result = json.result

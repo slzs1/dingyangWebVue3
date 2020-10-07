@@ -54,6 +54,7 @@ export default {
   },
   computed: {
     current() {
+      console.log(this.id)
       if (this.id) {
         return this.articles.find((a) => a.id.toString() === this.id.toString())
       }
@@ -72,7 +73,8 @@ export default {
     },
     changeArticle(article) {
       this.id = article.id
-      this.$router.push('/article/' + this.type + '/' + article.id)     
+      // this.$router.push('/article/' + this.type + '/' + article.id)
+      // this.$router.push({name: 'article-' + this.type + '-id', params: { id: article.id }})
     }
   }
 }

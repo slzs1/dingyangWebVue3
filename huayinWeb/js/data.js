@@ -6,13 +6,13 @@ jQuery(document).ready(function () {
             type: type,
             id: getUrlParam("id")
         }
-        var url = '/api/huayin/article'
+        var url = 'http://47.94.168.183:3004/api/huayin/article'
         $.ajax({
             type: 'get',
             data: {
                 type: type
             },
-            url: '/api/huayin/article',
+            url: 'http://47.94.168.183:3004/api/huayin/article',
             dataType: 'json',
             success:function(json){
                 result = json.result
@@ -30,7 +30,7 @@ jQuery(document).ready(function () {
         var params = {
             type: type
         }
-        var url = '/api/huayin/other'
+        var url = 'http://47.94.168.183:3004/api/huayin/other'
     }
     getDatabyId(params)
     function getDatabyId(params) {

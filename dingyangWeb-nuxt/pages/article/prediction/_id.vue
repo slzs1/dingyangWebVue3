@@ -16,6 +16,15 @@ export default {
         article: [],
       }
     },
+    // computed: {
+    //   idInit() {
+    //     if(this.id) {
+    //       return this.id
+    //     } else {
+    //       return this.$route.params.id
+    //     }
+    //   }
+    // },
     async asyncData (params) {
       const result = await axios.get(params.app.host +"/api/dingyang/article?type=prediction");
       
