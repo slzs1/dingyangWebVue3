@@ -4,7 +4,7 @@ router.prefix('/api')
 
 const coverStorage = multer.diskStorage({
     destination: function(req, file, cb){
-        cb(null, './public/covers')
+        cb(null, './public/uploads/covers')
     },
     //文件名称
     filename: function (req, file, cb) {
@@ -15,7 +15,7 @@ const coverStorage = multer.diskStorage({
 
 const videoStorage = multer.diskStorage({
     destination: function(req, file, cb){
-        cb(null, './public/videos')
+        cb(null, './public/uploads/videos')
     },
     //文件名称
     filename: function (req, file, cb) {
