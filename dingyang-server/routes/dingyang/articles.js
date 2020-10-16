@@ -79,4 +79,9 @@ router.post('/add', async (ctx, next) => {
     }
 })
 
+// router.post('/delete', async (ctx, next)=> {
+//     let id = ctx.request.body.id
+    
+// })
+
 module.exports = router
