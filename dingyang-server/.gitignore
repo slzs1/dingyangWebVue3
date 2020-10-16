@@ -8,3 +8,6 @@ npm-debug.log*
 
 # Dependency directories
 node_modules
+
+#上传的图片、视频等
+public/uploads
