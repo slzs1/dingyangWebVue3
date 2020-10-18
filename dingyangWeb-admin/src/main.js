@@ -13,21 +13,21 @@ import config from './config.js'
 
 promise.polyfill()
 //全局拦截
-// router.beforeEach((to, from, next) => {
-//   if (to.matched.some(record => record.meta.requireAuth)) {
-//     console.log(getCookie('UserName'))
-//     if (getCookie('UserName') != null) {
-//       next()
-//     } else {
-//       console.log('to login')
-//       next({
-//         path: '/login'
-//       })
-//     }
-//   } else {
-//     next()
-//   }
-// })
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.requireAuth)) {
+    console.log(getCookie('username'))
+    if (getCookie('username') != null) {
+      next()
+    } else {
+      console.log('to login')
+      next({
+        path: '/login'
+      })
+    }
+  } else {
+    next()
+  }
+})
 
 
 Vue.config.productionTip = false
@@ -43,10 +43,11 @@ new Vue({
 
 function getCookie(name) { //获取指定名称的cookie值
   // (^| )name=([^;]*)(;|$),match[0]为与整个正则表达式匹配的字符串，match[i]为正则表达式捕获数组相匹配的数组；
-  var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
-  if (arr != null) {
-    console.log(arr);
-    return unescape(arr[2]);
-  }
-  return null;
+  console.log(document.cookie);
+  var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+  if (arr = document.cookie.match(reg)){
+    return (arr[2]);
+}else{
+     return null;
+}      
 }
