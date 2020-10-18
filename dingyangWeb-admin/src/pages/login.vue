@@ -77,6 +77,7 @@ export default {
             this.isFailed = true;
           } else {
             console.log("login success");
+            document.cookie="username=admin; path=/";
             this.$router.push({ path: "/article" });
           }
         });

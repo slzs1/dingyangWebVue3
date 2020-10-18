@@ -2,7 +2,7 @@
   <div class="new-article">
     <div class="top">
       <div>
-        <h2>hy.tcualhp.cn</h2>
+        <h2>华银网站</h2>
         <h2>新增文章</h2>
       </div>
       <button

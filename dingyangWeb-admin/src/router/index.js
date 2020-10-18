@@ -26,7 +26,10 @@ export default new Router({
     },
     {
       path: '/login',
-      component: login
+      component: login,
+      meta: {
+        //requireAuth: true,
+      }
     },
     {
       path: '/video',

@@ -35,7 +35,10 @@
         id="bs-example-navbar-collapse-1"
       >
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="http://dy.tcualhp.cn/" target="_blank">dy.tcualhp.cn</a></li>
+          <li @click="delCookie"><router-link to="/">退出</router-link></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="http://47.94.168.183:4000/" target="_blank">访问丁洋网站</a></li>
           <li class="dropdown">
             <a
               href="#"
@@ -44,7 +47,7 @@
               role="button"
               aria-haspopup="true"
               aria-expanded="false"
-            >dingyang<span class="caret"></span></a>
+            >丁洋-新增<span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><router-link to="/article">文章</router-link></li>
               <li><router-link to="/video">视频</router-link></li>
@@ -52,7 +55,7 @@
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="https://hy.tcualhp.cn/" target="_blank">hy.tcualhp.cn</a></li>
+          <li><a href="http://47.94.168.183:8000/" target="_blank">访问华银网站</a></li>
           <li class="dropdown">
             <a
               href="#"
@@ -61,7 +64,7 @@
               role="button"
               aria-haspopup="true"
               aria-expanded="false"
-            >huayin<span class="caret"></span></a>
+            >华银-新增<span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><router-link to="/hyarticle">新闻/报告</router-link></li>
               <li><router-link to="/hyothers">其他</router-link></li>
@@ -77,5 +80,26 @@
 @import '../assets/style/header.scss';
 </style>
 <script>
-export default {};
+export default {
+  methods: {
+    getCookie(name) {
+  console.log(document.cookie);
+  var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+  if (arr = document.cookie.match(reg)){
+    return (arr[2]);
+  }else{
+     return null;
+    }
+},
+    delCookie (name) {
+	var exp = new Date();
+	exp.setTime(exp.getTime() - 1);
+	var cval =this.getCookie("username");
+	if (cval){
+	 	document.cookie = "username" + "=" + cval + ";expires=" + exp.toGMTString();
+  }
+  this.$router.push({ path: "/article" }).catch(err => {})
+  }
+}
+};
 </script>
