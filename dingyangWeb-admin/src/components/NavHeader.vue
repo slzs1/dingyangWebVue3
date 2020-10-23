@@ -35,7 +35,7 @@
         id="bs-example-navbar-collapse-1"
       >
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="http://dy.tcualhp.cn/" target="_blank">dy.tcualhp.cn</a></li>
+          <li><a href="http://dy.tcualhp.cn/" target="_blank">访问丁洋网站</a></li>
           <li class="dropdown">
             <a
               href="#"
@@ -44,7 +44,7 @@
               role="button"
               aria-haspopup="true"
               aria-expanded="false"
-            >dingyang<span class="caret"></span></a>
+            >丁洋<span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><router-link to="/article">文章</router-link></li>
               <li><router-link to="/video">视频</router-link></li>
@@ -52,7 +52,7 @@
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="https://hy.tcualhp.cn/" target="_blank">hy.tcualhp.cn</a></li>
+          <li><a href="https://hy.tcualhp.cn/" target="_blank">访问 华银网站</a></li>
           <li class="dropdown">
             <a
               href="#"
@@ -61,7 +61,7 @@
               role="button"
               aria-haspopup="true"
               aria-expanded="false"
-            >huayin<span class="caret"></span></a>
+            >华银<span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><router-link to="/hyarticle">新闻/报告</router-link></li>
               <li><router-link to="/hyothers">其他</router-link></li>

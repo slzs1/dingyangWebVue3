@@ -4,6 +4,9 @@ const url = 'mongodb://root:root@47.97.204.235:27017/dingyang'
 module.exports = {
     connect: ()=>{
         mongoose.connect(url)
+        // mongoose.connect(url,{
+        //     useNewUrlParser: true
+        // })
         let db = mongoose.connection
         db.on("connected", function(){
             console.log('MongoDB connected success.')
